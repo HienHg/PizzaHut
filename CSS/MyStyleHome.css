@@ -1,0 +1,282 @@
+/*reset css*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header{
+    position: fixed;
+    top:0; 
+    left:0; 
+    right: 0;
+    background-image: url(./Image/header.png);
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 1000;
+}
+
+header .logo img{
+    width: 90%;
+}
+
+header .navbar ul{
+    list-style: none;
+    text-transform: capitalize;
+}
+
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px;
+    color:#000000;
+    display: block;
+    text-decoration: none;
+}
+
+header #menu-bar{
+    display: none;
+}
+
+
+header .navbar ul li a:hover{
+    background: rgb(111, 105, 105, 0.2);
+    color: #FF0000;
+}
+
+header .navbar ul li ul{
+    position:absolute;
+    left:0;
+    width:200px;
+    background: rgba(255, 255, 255, 0.862);
+    display: none;
+}
+
+header .navbar ul li ul li{
+    width:100%;
+    border-top: 0.5px solid #000000;
+}
+
+header .navbar ul li ul li:last-child{
+    border-bottom: 0.5px solid #000000;
+}
+
+
+header .navbar ul li:hover > ul{
+    display:initial;
+}
+
+#menu{
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    color: #000000;
+    cursor: pointer;
+    display: none;
+    font-weight: bolder;
+
+}
+
+
+header .account ul{
+    display: flex;
+    list-style: none;
+}
+
+nav .account ul li a img{
+    width: 80%;
+}
+/*banner*/
+.banner img{
+    width: 100%;
+}
+
+.banner1{
+    margin-top: 72px ;
+}
+
+/*footer*/
+footer{
+    background-image: url(./Image/header.png);
+    width: 100%;
+    position: relative;
+}
+
+footer nav{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+footer nav .logo2 img{
+    width: 50%;
+    padding-top: 0px;
+}
+
+.logo2{
+    padding-left: 4%;
+}
+
+.logo2 ul{
+    display: flex;
+    list-style: none;
+    padding-left: 10px;
+}
+
+.logo2 ul li p{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 4px 20px;
+}
+
+.contact p{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.contact ul{
+    display: flex;
+    list-style: none;
+}
+
+.contact ul li img{
+    padding: 0 8px;
+    width: 90%;
+}
+
+.app p{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.app img{
+    width: 100%;
+}
+
+.app{
+    padding-right: 4%;
+}
+
+
+body{
+    background-image: url(./Image/background.png);
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: contain;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+@media(max-width:925px){
+    header{
+        justify-content: space-between;
+        position: relative;
+    }
+
+    header .logo{
+        padding-top: 10px;
+        width: 50%;
+    }
+
+    header label{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top:100%; 
+        left:0; 
+        right:0;
+        background: rgba(255, 255, 255);
+        /* border-top: 1px solid black; */
+        display: none;
+    
+    }
+    header .navbar ul li{
+        width: 100%;
+    }
+    header .navbar ul li ul{
+        width: 100%;
+        position: relative;
+    }
+    header .navbar ul li ul li{
+        background: rgb(255, 255, 255, 0.1);
+        margin-left: 20px;
+    }
+    #menu-bar{
+        display: none;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+
+    .account ul img{
+        width: 50%;
+    }
+
+    .banner1{
+        margin-top: 0;
+    }
+    footer .logo2{
+        padding-left: 36%;
+        padding-top: 32px;
+        padding-bottom: 0;
+    }
+    .contact{
+        padding-left: 16%;
+        padding-top: 0;
+        
+    }
+
+    .app{
+        padding-left: 16%;
+    }
+    .contact p{
+       font-size: 24px;
+    }
+    .contact ul li a img{
+        width: 90%;
+    }
+
+    .app p{
+        font-size: 24px
+    }
+
+    .app img{
+        width: 76%;
+        padding-left: 8%;
+    }
+
+    footer nav{
+        display: initial;
+    }
+
+    .logo2 img{
+        width: 100%;
+    }
+
+    .contact img{
+        width: 36%;
+    }
+    .logo2 ul li p{
+        display: none;
+    }
+}
